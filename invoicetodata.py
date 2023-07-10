@@ -7,7 +7,7 @@ from datetime import datetime
 class DateTimeEncoder(json.JSONEncoder):
     def default(self, obj):
         if isinstance(obj, datetime):
-            return obj.isoformat()
+            return obj.strftime("%I:%M %p, %B %d,%Y")
         return super().default(obj)
 
 

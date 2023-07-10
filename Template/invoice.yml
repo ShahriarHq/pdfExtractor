@@ -1,8 +1,9 @@
 issuer: Shopoth
 fields:
   invoice_number: Order\s+#\s+(\d+)
-  amount: Grand Total\s*.*(\d+\.\d+)
-  date: Order Date\s+:\s+(\d{1,2}:\d{2} (?:AM|PM), [a-zA-Z]+ \d{1,2}, \d{4})
+  amount: Grand Total\s*(.*)
+#  date: Order Date\s+:\s+(\d{1,2}:\d{2} (?:AM|PM), [a-zA-Z]+ \d{1,2}, \d{4})
+  date: Order Date\s+:\s+(\b\d{1,2}:\d{2} (?:AM|PM), [a-zA-Z]+ \d{1,2}, \d{4}\b)
   deadline: Order Deadline\s+:\s+(\d{1,2}:\d{2} (?:AM|PM), [a-zA-Z]+ \d{1,2}, \d{4})
   status: Status\s+:\s+(.+)
 keywords:
