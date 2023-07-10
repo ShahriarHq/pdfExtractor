@@ -1,0 +1,26 @@
+{
+    "issuer": "Shopoth",
+    "invoice_number": "0000183188",
+    "amount": 6.0,
+    "date": "2023-07-04T10:41:00",
+    "deadline": "10:41 AM, Jul 7, 2023",
+    "status": "Partially Returned                                                                                                                                   01833184152",
+    "currency": "BDT",
+    "lines": [
+        {
+            "item": "Meril Petroleum Jelly 50ml",
+            "unit_price": "59.00",
+            "quantity": "4",
+            "discount": "0.00",
+            "amount": "236.00"
+        },
+        {
+            "item": "Meril Milk & Beli Soap Bar (Box Pack) 150gm",
+            "unit_price": "68.00",
+            "quantity": "4",
+            "discount": "0.00",
+            "amount": "272.00"
+        }
+    ],
+    "desc": "Invoice from Shopoth"
+}

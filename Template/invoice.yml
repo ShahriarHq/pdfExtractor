@@ -1,0 +1,24 @@
+issuer: Shopoth
+fields:
+  invoice_number: Order\s+#\s+(\d+)
+  amount: Grand Total\s*.*(\d+\.\d+)
+  date: Order Date\s+:\s+(\d{1,2}:\d{2} (?:AM|PM), [a-zA-Z]+ \d{1,2}, \d{4})
+  deadline: Order Deadline\s+:\s+(\d{1,2}:\d{2} (?:AM|PM), [a-zA-Z]+ \d{1,2}, \d{4})
+  status: Status\s+:\s+(.+)
+keywords:
+  - Customer Information
+  - Order
+  - National Board of Revenue
+  - Tax Challan
+lines:
+  start: ITEM
+  end: \*VAT @ 5% is on the differential between Sales & Purchase price
+  first_line: ^(?P<item>.+)\s+(?P<unit_price>\d+\.\d+)\s+(?P<quantity>\d+)\s+(?P<discount>\d+\.\d+)\s+(?P<amount>\d+\.\d+)
+  line: (.*)\$(\d+\.\d+)
+options:
+  currency: BDT
+  date_formats:
+    - '%B %d, %Y'
+  languages:
+    - en
+  decimal_separator: '.'
